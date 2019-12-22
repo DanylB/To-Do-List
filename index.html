@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <header>
+        <div id="X" class="option">X</div>
+        <div id="minus" class="option">–</div>
+        <img id="headImg" src="file:///D:\Коледж\Курсач\Roga\img\pensil5.png" alt="">
+        <div id="titleText">DayToDo</div>
+    </header>
+
+    <img id="trashAll" src="file:///D:\Коледж\Курсач\Roga\img\dellAll.png" >
+      
+        <div id="boxAddToDo">
+            <p id="p1" >Добавить задачу</p>
+            <input id="inputToDo" type="text" maxlength="35" placeholder="Сходить на пары">
+
+            <p id="p2">Выполнить в:</p>
+            <input id="inputTime" type="time">
+
+            <p id="p3" >Оповещениe:</p>
+            <input id="inputTimeAlert" type="time">
+
+            <p id="p4" >Важность задачи</p>
+            <span>
+                <div class="tooltip" id="greenCirkle"><span class="tooltiptext">Не особо важно</span></div>
+                <div class="tooltip" id="orangeredCirkle"><span class="tooltiptext">Важно</span></div>
+                <div class="tooltip" id="redCirkle"><span class="tooltiptext">Крайне важно</span></div>
+            </span>
+
+            <div id="addToDo">✓</div>
+        </div>
+    
+       
+        <ul class="todos" id="tdlUl">
+            
+        </ul>
+
+
+    <script>
+            require('./script.js');
+            require('./index.js');
+            require('./render.js');
+    </script>
+</body>
+</html>

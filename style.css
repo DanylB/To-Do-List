@@ -1,0 +1,313 @@
+body{user-select: none; font-family:'Roboto';}
+body::-webkit-scrollbar{width: 0;}
+
+/*Верхняя панель, title, кнопки option*/
+header{
+    position: fixed;
+    display:flex;
+    height:49.5px;
+    width:100%; 
+    top:0;
+    left:0;
+    justify-content:flex-end;
+    background: #353535;
+    color:#fff;
+    align-items:center;
+    flex-direction: row-reverse;
+    -webkit-app-region:drag;
+    z-index:5;
+}
+/*Pensil img*/
+#headImg{
+    position: absolute;
+    float:left;
+    width:60px; 
+    height:60px;
+    margin-left:30px;
+    margin-top:20px;
+    -webkit-app-region:drag;
+    z-index: 1;
+}
+
+#titleText{
+    flex-grow: 1;
+    margin-left:130px;
+    font-size: 20px;
+}
+.option{
+    font-size:24px;
+    padding:10px 25px;
+    cursor: pointer;
+    -webkit-app-region:no-drag;
+}
+.option:hover{background: red;}
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*Button Add ToDo*/
+#addToDo{
+    display: flex;
+    position: fixed;
+    width:60px;
+    height: 60px;
+    left:300px;
+    bottom:30px;
+    border-radius: 30px;
+    background: #016FC1;
+    color:#fff;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    transition:.4s;
+
+}
+
+#addToDo:hover{
+    background:#044698;
+    transition:.4s;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*Left panel, Add ToDo*/
+#boxAddToDo {
+    position: fixed;
+    width: 40%;
+    height: 100%;
+    top:50px;
+    left:0;
+    border-right: 2px solid #bababa;
+    color:#fff;   
+  }
+  
+#p1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color:#000;
+    font-size:22px;   
+}
+#boxAddToDo>input{
+    display: flex;
+    font-size:22px;
+    outline:0px;
+    -webkit-appearance:none;
+    margin:0 auto;
+    border:1px solid #bababa;
+    border-radius:5px;
+    padding: 5px;
+}
+#boxAddToDo>input:focus{box-shadow: 0 0 4px #bababa;}
+
+#inptTimeBox{
+    display: flex;
+     
+     justify-content: center;
+     height:100%;
+     margin-top:40px;
+}
+#inputTime{
+    position: relative;
+    display:block;
+    top:30px;
+    left:80px;
+}
+#p2{
+    position: absolute;
+    top:125px;
+    left:60px;
+    
+    color:#000;
+    font-size:22px; 
+}
+#inputTime>input:focus{box-shadow: 0 0 4px #bababa;}
+
+#inputTimeAlert{
+    position: relative;
+    display:block;
+    top:80px;
+    left:80px;
+}
+#p3{
+    position: absolute;
+    top:220px;
+    left:60px;
+    color:#000;
+    font-size:22px; 
+}
+#inputTimeAlert>input:focus{box-shadow: 0 0 4px #bababa;}
+
+#boxAddToDo>span{
+    position: relative;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    top:100px;
+}
+
+#greenCirkle{
+    width:30px;
+    height:30px;
+    border-radius: 20px;
+    background:#00F929;
+    margin: 10px;
+}
+
+#orangeredCirkle{
+    width:30px;
+    height:30px;
+    border-radius: 20px;
+    background:#FF8635;
+    margin: 10px;
+
+}
+#redCirkle{
+    width:30px;
+    height:30px;
+    border-radius: 20px;
+    background:#FF3C3C;
+    margin: 10px;
+}
+#p4{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color:#000;
+    font-size:22px;  
+    top:100px; 
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*List ToDo*/
+.todos{
+    position: absolute; 
+    width:100%;
+    top:40px;
+    left:362px;
+    list-style-type:none;
+    overflow: scroll;
+}
+.todos::-webkit-scrollbar{width: 0;}
+
+.todos>li{  
+    position:relative;
+    font-size:22px;
+    font-family: 'Roboto';
+    display: flex;
+    flex-direction:row;
+    height:40px;
+    padding:10px;
+    
+}
+.tdItem{
+    position:relative;
+    font-size:22px;
+    font-family: 'Roboto';
+    display: flex;
+    flex-direction:row;
+    height:40px;
+    padding:10px; 
+}
+.supClass{
+    font-size:16px;
+    color:grey;
+    margin-left:3px;
+}
+
+.imgToDoGreen{ 
+    position:relative;
+    display:flex;
+    flex-direction:row; 
+    width: 40px;
+    height:40px;
+    border-radius:15px;
+    background-image:url(img/pensilGreen.png);
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    
+}
+.imgToDoOrangered{ 
+    display:flex;
+    flex-direction:row; 
+    width: 40px;
+    height:40px;
+    border-radius:15px;
+    background-image:url(img/pensilOrangered.png);
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+}
+.imgToDoRed{ 
+    display:flex;
+    flex-direction:row; 
+    width: 40px;
+    height:40px;
+    border-radius:15px;
+    background-image:url(img/pensilRed.png);
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*Подсказки*/
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 140%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+   
+}
+
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #555 transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*Кнопка удалить все записи*/
+#trashAll{
+    position: fixed;
+    width:30px;
+    height:30px;
+    bottom:10px;
+    right:10px;
+    z-index:5;
+}
+
+#trashAll:hover{ 
+    transform: scale(1.1);
+}
+
+#trashAll:active{ 
+    transform: scale(1.2);
+}
