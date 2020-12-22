@@ -12,6 +12,6 @@
     "electron": "^7.1.7",
     "electron-packager": "^14.1.0",
     "jquery": "^3.4.1",
-    "node-notifier": "^6.0.0"
+    "node-notifier": "^8.0.1"
   }
 }
