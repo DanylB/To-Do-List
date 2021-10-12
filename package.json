@@ -9,7 +9,7 @@
   "author": "Danil Bogomedov",
   "license": "ISC",
   "dependencies": {
-    "electron": "^7.1.7",
+    "electron": "^11.5.0",
     "electron-packager": "^14.1.0",
     "jquery": "^3.4.1",
     "node-notifier": "^6.0.0"
